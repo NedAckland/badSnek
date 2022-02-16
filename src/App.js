@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Grid from './components/Grid'
+
 
 function App() {
+  const [isGameOver, setIsGameOver] = useState(false)
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>  {isGameOver ? "You died" : "SNEK" }</h1>
       </header>
+      
+      <div className='grid--container'>
+        {isGameOver ? 
+        <div>
+          <button onClick={() => setIsGameOver(false)}>Play Again?</button>
+        </div> 
+        : 
+          <Grid setIsGameOver={setIsGameOver}/>
+        }
+      </div>
     </div>
   );
 }

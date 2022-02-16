@@ -1,0 +1,10 @@
+.grid {
+    height: max-content;
+    /* background-color: rgb(75, 75, 75); */
+    background-color: rgb(170, 191, 205);;
+    display: grid;
+    grid-template-columns: repeat(40, 2.5%);
+    grid-template-rows: repeat(auto-fill, 10%);
+    outline: 10px solid black;
+}
+
