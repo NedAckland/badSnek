@@ -33,7 +33,7 @@ function Grid({setIsGameOver}) {
             let coords = m.get(direction)
             coords(position)
             mve(m, direction)
-        }, 90 )
+        }, 150 )
     }
 
     const handleKeyDown = (e) => {
